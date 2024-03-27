@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+}
+
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px;
+}
+
+header nav {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media(max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav li a {
+        font-size: 15px;
+    }
+}
+
+/* BANNER */
+.banner {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    min-height: 80vh;
+}
+
+.banner .banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/fondo\ u\ de\ chile.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.banner .banner-img::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .5;
+}
+
+.banner h1 {
+    margin-top: 10%;
+    margin-bottom: 10px;
+    font-size: 65px;
+}
+
+.banner h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.banner a.banner-btn {
+    text-transform: uppercase;
+    background: crimson;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+@media(max-width:600px) {
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner h2 {
+        font-size: 20px;
+    }
+
+    .banner a.banner-btn {
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+}
+
+/* SECCIONES */
+section {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+@media(max-width:600px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+
+
+/*DIOS ZORO*/
+.dios-contenido {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dios-titulo {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.dios-contenido li {
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.dios-izq {
+    background-image: url("../img/gif\ u\ de\ chile.jpg");
+    flex-basis: 40%;
+}
+
+.dios-der {
+    flex-basis: 60%;
+}
+
+.dios-contenido p {
+    margin-bottom: 30px;
+    text-align: justify;
+    padding-left: 0;
+}
+
+.dios-contenido h2 {
+    margin-bottom: 2%;
+}
+
+.dios-btn {
+    text-transform: uppercase;
+    background: crimson;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+@media(max-width:600px) {
+
+    .dios-izq,
+    .dios-der {
+        flex-basis: 100%;
+    }
+
+    .dios-der {
+        text-align: center;
+    }
+}
+
+/*MARINA*/
+.marina-contenido {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.marina-titulo {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.marina-contenido li {
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.marina-izq {
+    background-image: url("../img/gif\ u\ de\ chile\ 2.jpg");
+    flex-basis: 40%;
+}
+
+.marina-der {
+    flex-basis: 60%;
+}
+
+.marina-contenido p {
+    margin-bottom: 30px;
+    text-align: justify;
+    padding-left: 0;
+}
+
+.marina-contenido h2 {
+    margin-bottom: 2%;
+}
+
+.marina-btn {
+    text-transform: uppercase;
+    background: crimson;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+@media(max-width:600px) {
+
+    .marina-izq,
+    .marina-der {
+        flex-basis: 100%;
+    }
+
+    .marina-der {
+        text-align: center;
+    }
+}
+
+/* MUGIWARAS */
+.mugiwaras {
+    background: rgb(110, 109, 108);
+}
+
+.mugiwaras-contenido {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.mugiwaras-contenido li {
+    flex-basis: 33%;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.mugiwaras-titulo {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.mugiwaras-contenido li h4 {
+    margin-bottom: 5%;
+    font-size: 20px;
+}
+
+.mugiwaras-contenido li p {
+    text-align: justify;
+}
+
+@media(max-width:600px) {
+    .mugiwaras-contenido li {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+}
+
+/* FOOTER */
+footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
